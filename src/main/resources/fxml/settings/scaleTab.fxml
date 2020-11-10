@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.com.avs.controller.ScaleTabController">
+
+    <Button layoutX="14.0" layoutY="14.0" onAction="#addScale" prefHeight="32.0" prefWidth="32.0">
+        <graphic>
+            <ImageView fitHeight="24" fitWidth="24" pickOnBounds="true" preserveRatio="true">
+                <Image url="/icon/icon-add-64.png"/>
+            </ImageView>
+        </graphic>
+    </Button>
+
+    <Button fx:id="scaleDeleteButton" disable="true" layoutX="61.0" layoutY="14.0" onAction="#deleteScale" prefHeight="32.0" prefWidth="32.0">
+        <graphic>
+            <ImageView fitHeight="24" fitWidth="24" pickOnBounds="true" preserveRatio="true">
+                <Image url="/icon/icon-delete-64.png"/>
+            </ImageView>
+        </graphic>
+    </Button>
+
+    <TableView fx:id="scaleTable" layoutX="14.0" layoutY="46.0" onMouseClicked="#onSelectScale" prefHeight="463.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="50.0">
+        <columns>
+            <TableColumn fx:id="scaleIdColumn" onEditStart="#onScaleEdit" prefWidth="34.0" text="Id" />
+            <TableColumn fx:id="scaleNameColumn" onEditStart="#onScaleEdit" prefWidth="140.0" text="Наименование" />
+            <TableColumn fx:id="scalePortColumn" minWidth="3.0" onEditStart="#onScaleEdit" prefWidth="68.0" text="Порт" />
+            <TableColumn fx:id="scaleTypeColumn" minWidth="0.0" onEditStart="#onScaleEdit" prefWidth="102.0" text="Тип" />
+            <TableColumn fx:id="scaleCameraColumn" minWidth="0.0" onEditStart="#onScaleEdit" prefWidth="145.0" text="URL камеры" />
+            <TableColumn fx:id="scaleModeColumn" minWidth="0.0" onEditStart="#onScaleEdit" prefWidth="94.0" text="Режим" />
+        </columns>
+    </TableView>
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.com.avs.controller.DepartmentTabController">
+    <HBox>
+        <GridPane.margin>
+            <Insets bottom="5" left="5" top="5" />
+        </GridPane.margin>
+        <Label text="Выбрано подразделение: " />
+        <Label fx:id="lblSelected" text="не выбрано" />
+    </HBox>
+    <TableView fx:id="departmentTable" maxHeight="300" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+        <GridPane.margin>
+            <Insets bottom="5" top="5" />
+        </GridPane.margin>
+        <columns>
+            <TableColumn fx:id="departmentIdColumn" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="departmentNameColumn" prefWidth="200.0" text="Наименование" />
+            <TableColumn fx:id="departmentAliasColumn" minWidth="200.0" prefWidth="134.0" text="Алиас" />
+            <TableColumn fx:id="departmentTypeColumn" minWidth="200.0" prefWidth="136.0" text="Тип" />
+        </columns>
+    </TableView>
+    <HBox GridPane.rowIndex="2">
+        <Button onAction="#onSelect" text="Выбрать">
+            <HBox.margin>
+                <Insets bottom="5" />
+            </HBox.margin>
+        </Button>
+        <Button onAction="#onSync" text="Синхронизировать">
+            <HBox.margin>
+                <Insets bottom="5" left="5" />
+            </HBox.margin>
+        </Button>
+    </HBox>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

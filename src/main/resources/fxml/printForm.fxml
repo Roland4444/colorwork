@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="584.0" prefWidth="174.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.com.avs.controller.PrintController">
+    <children>
+        <AnchorPane fx:id="draftAnchor" layoutX="5.0" layoutY="2.0" prefHeight="500.0" prefWidth="180.0" styleClass="draft" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label fx:id="waybillText" layoutX="35.0" layoutY="6.0" prefHeight="40.0" prefWidth="122.0" styleClass="draft-label-header" text="Чек" />
+                <Label fx:id="commentText" layoutX="10.0" layoutY="74.0" prefHeight="20.0" prefWidth="150.0" styleClass="draft-label" text="Клиент:" />
+                <Label fx:id="dateText" layoutX="10.0" layoutY="101.0" prefHeight="20.0" prefWidth="150.0" styleClass="draft-label" text="Дата: " />
+
+                <ListView fx:id="nameColumn" layoutX="4.0" layoutY="142.0" prefHeight="186.0" prefWidth="124.0" styleClass="draft-table" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="53.0" />
+                <ListView fx:id="weightColumn" layoutX="125.0" layoutY="142.0" prefHeight="186.0" prefWidth="50.0" styleClass="draft-table" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="3.0" />
+
+                <ImageView fx:id="qrImage" fitHeight="150.0" fitWidth="150.0" layoutX="17.0" layoutY="335.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="335.0" />
+            </children>
+        </AnchorPane>
+        <Button layoutX="14.0" layoutY="545.0" mnemonicParsing="false" onAction="#print" text="Печать" />
+        <Button layoutX="108.0" layoutY="545.0" mnemonicParsing="false" onAction="#cancel" text="Отмена" />
+    </children>
+</AnchorPane>

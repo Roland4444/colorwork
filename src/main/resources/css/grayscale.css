@@ -1,0 +1,245 @@
+/**
+Common.
+ */
+.root {
+    background-main: #AAAAAA;
+    border-main: #FCC726;
+
+    background-dark: #636363;
+    background-light: #a6a6a6;
+
+    background-gray: #e3e3e3;
+
+    background-hover: #8b8b8b;
+    border-hover: #fcfaa5;
+
+
+
+    text-dark: #212121;
+    text-light: #FFFFFF;
+}
+
+.label {
+    -fx-font-size: 12px;
+    -fx-text-fill: text-light;
+}
+
+/**
+Button.
+ */
+.button {
+    -fx-background-color: background-dark;
+    -fx-font-size: 12px;
+ /**   -fx-font-weight: bold; */
+    -fx-text-fill: text-light;
+    -fx-border-color: border-main;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+}
+
+.button:hover {
+    -fx-border-color: border-hover;
+    -fx-background-color: background-hover;
+}
+
+/**
+Toggle button.
+ */
+
+.toggle-button {
+    -fx-background-color: background-dark;
+    -fx-font-size: 12px;
+ /**   -fx-font-weight: bold; */
+    -fx-text-fill: text-light;
+    -fx-border-color: border-main;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+}
+
+.toggle-button:hover {
+    -fx-border-color: border-hover;
+    -fx-background-color: background-hover;
+}
+
+.toggle-button:selected
+{
+    -fx-border-color: background-hover;
+    -fx-background-color: background-gray;
+    -fx-text-fill: text-dark;
+}
+
+
+
+/**
+AnchorPane.
+ */
+AnchorPane {
+    -fx-border-color: border-main;
+    -fx-background-color: background-main;
+}
+
+/**
+Text field.
+ */
+.decimal-field, .text-field {
+    -fx-font-size: 14px;
+ /**   -fx-font-weight: bold; */
+}
+
+.decimal-field {
+    -fx-border-color: border-main;
+    -fx-pref-height: 25px;
+    -fx-pref-width: 274px
+}
+
+.main-weight-value {
+    -fx-font-size: 50px;
+    -fx-text-fill: text-light;
+}
+
+.main-weight-text {
+    -fx-font-size: 24px;
+    -fx-text-fill: text-light;
+}
+
+
+/**
+Date picker.
+ */
+.date-picker {
+    -fx-background-color: background-gray;
+}
+
+.date-picker .text-field {
+    -fx-background-color: background-dark;
+    -fx-font-size: 14px;
+    -fx-text-fill: text-light;
+    -fx-effect: dropshadow(gaussian, rgb(188, 188, 188), 0, 0, 0, 1);
+}
+
+.date-picker-popup {
+    -fx-border-color: border-main;
+}
+
+.date-picker-popup > .month-year-pane {
+    -fx-background-color: black;
+    -fx-background-insets: 0;
+    -fx-font-size: 10px;
+}
+
+.date-picker-popup > .calendar-grid {
+    -fx-background-color: background-dark;
+    -fx-padding: 0;
+}
+
+.date-picker-popup > * > .day-cell.previous-month,
+.date-picker-popup > * > .day-cell.next-month {
+    -fx-background-color: background-dark;
+}
+
+.date-picker-popup > * > .day-cell {
+    -fx-background-color: background-light;
+}
+
+.date-picker-popup > * > .day-cell:hover,
+.date-picker-popup > * > .day-cell.previous-month:hover,
+.date-picker-popup > * > .day-cell.next-month:hover {
+    -fx-background-color: background-main;
+    -fx-text-fill: text-light;
+}
+
+.date-picker-popup > * > .day-cell.selected {
+    -fx-background-color: border-main;
+    -fx-text-fill: text-light;
+}
+
+/**
+TableView.
+ */
+.table-view {
+    -fx-background-color: black;/**background-light; **/
+}
+
+.table-row-cell:filled:hover {
+   /* -fx-background-color: #fcfaa5;  */
+    -fx-text-fill: black;
+}
+
+.table-row-cell:selected {
+    -fx-text-fill: text-dark;
+ }
+
+
+
+.table-view > .column-header-background > * {
+    -fx-background-color: background-main;
+    -fx-border-color: border-main
+}
+
+.table-view .column-header {
+    -fx-background-color: background-main;
+    -fx-border-color: border-main;
+    -fx-text-fill: text-light;
+}
+
+/**
+Tab-pane
+ */
+.tab-pane > .tab-header-area > .tab-header-background {
+    -fx-background-color: background-dark;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab {
+    -fx-background-color: background-main;
+    -fx-border-color: border-main;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: text-light;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:selected > {
+    -fx-border-color: border-hover;
+    -fx-background-color: background-gray;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:selected > .tab-container > .tab-label {
+    -fx-text-fill: black;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:hover {
+    -fx-border-color: border-hover;
+    -fx-background-color: background-hover;
+}
+
+.draft {
+    -fx-border-color: black;
+/*    -fx-background-color: white;  */
+}
+
+.draft-label-header {
+    -fx-font-size: 28px;
+    /*fx-font-weight: bold;*/
+    -fx-text-fill: black
+}
+
+.draft-label {
+    -fx-font-size: 12px;
+    /*fx-font-weight: bold;*/
+    -fx-text-fill: black
+}
+
+.draft-table {
+    -fx-border-color: white;
+/*    -fx-background-color: white;  */
+}
+
+.draft-table .list-cell {
+/*    -fx-background-color: white;  */
+    -fx-font-size: 10px;
+/*    -fx-font-weight: bold;*/
+    -fx-text-fill: black;
+    -fx-padding: 1px;
+    -fx-margin: 1px;
+}

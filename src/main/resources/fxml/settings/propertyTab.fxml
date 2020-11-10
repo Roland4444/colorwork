@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.com.avs.controller.PropertyTabController">
+    <TableView fx:id="propertyTable" prefHeight="422.0" prefWidth="588.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="32.00001525878906" text="id" />
+            <TableColumn fx:id="nameColumn" minWidth="0.0" onEditStart="#onPropertyEditStart" prefWidth="249.0" text="Ключ" />
+            <TableColumn fx:id="valueColumn" minWidth="0.0" onEditStart="#onPropertyEditStart" prefWidth="251.0" text="Значение" />
+        </columns>
+    </TableView>
+</AnchorPane>

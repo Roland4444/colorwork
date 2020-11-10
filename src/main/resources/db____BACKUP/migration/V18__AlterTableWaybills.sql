@@ -1,0 +1,2 @@
+ALTER TABLE WAYBILLS
+    ADD COLUMN scale_id INTEGER default 0;

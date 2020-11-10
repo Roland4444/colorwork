@@ -1,0 +1,7 @@
+CREATE TABLE departments (
+    id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+    name VARCHAR(255),
+    alias VARCHAR(255),
+    type VARCHAR(255),
+    CONSTRAINT departments_pk PRIMARY KEY (id)
+);

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.com.avs.controller.MetalTabController">
+    <TableView fx:id="table" maxHeight="300" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+        <GridPane.margin>
+            <Insets bottom="5" top="5" />
+        </GridPane.margin>
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="nameColumn" prefWidth="200.0" text="Наименование" />
+        </columns>
+    </TableView>
+    <HBox GridPane.rowIndex="2">
+        <Button onAction="#onSync" text="Синхронизировать">
+            <HBox.margin>
+                <Insets bottom="5" />
+            </HBox.margin>
+        </Button>
+    </HBox>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

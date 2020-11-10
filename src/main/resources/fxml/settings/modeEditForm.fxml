@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="136.0" prefWidth="451.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.com.avs.controller.ModeEditController">
+    <children>
+        <VBox fx:id="vbox" layoutX="5.0" layoutY="14.0" prefHeight="134.0" prefWidth="441.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+            <Label styleClass="text-field" text="Наименование" />
+            <TextField fx:id="nameText" styleClass="decimal-field" />
+            <Label styleClass="text-field" text="Код" />
+            <TextField fx:id="codeText" styleClass="decimal-field" />
+
+            <HBox>
+                <Button layoutX="24.0" layoutY="480.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="150.0" text="Сохранить" />
+                <Button layoutX="333.0" layoutY="480.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="150.0" text="Отмена">
+                    <HBox.margin>
+                        <Insets left="280.0" />
+                    </HBox.margin>
+                </Button>
+                <VBox.margin>
+                    <Insets bottom="10.0" top="30.0" />
+                </VBox.margin>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

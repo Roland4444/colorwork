@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import ru.com.avs.view.DecimalField?>
+
+<AnchorPane prefHeight="459.0" prefWidth="474.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.com.avs.controller.WaybillEditController">
+    <children>
+        <VBox layoutX="14.0" layoutY="14.0" prefHeight="431.0" prefWidth="389.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+
+                <Label styleClass="text-field" text="Дата" />
+                <DatePicker fx:id="dateText" styleClass="decimal-field" />
+
+                <Label styleClass="text-field" text="Комментарий" />
+                <TextField fx:id="commentText" styleClass="decimal-field" />
+
+                <Label styleClass="text-field" text="Номер накладной" />
+                <TextField fx:id="waybillText" styleClass="decimal-field" />
+
+                <Label styleClass="text-field" text="Брутто" />
+                <DecimalField fx:id="bruttoText" styleClass="decimal-field" />
+
+                <Label styleClass="text-field" text="Нетто" />
+                <DecimalField fx:id="nettoText" styleClass="decimal-field" />
+
+                <Label styleClass="text-field" text="Засор" />
+                <DecimalField fx:id="cloggingText" styleClass="decimal-field" />
+
+                <Label styleClass="text-field" text="Примеси" />
+                <DecimalField fx:id="trashText" styleClass="decimal-field" />
+
+                <Label styleClass="text-field" text="Тара (кг)" />
+                <DecimalField fx:id="tareText" styleClass="decimal-field" />
+
+                <Label styleClass="text-field" text="Металл" />
+                <ComboBox fx:id="metalBox" prefHeight="25.0" prefWidth="443.0" styleClass="decimal-field" />
+
+                <HBox>
+                    <Button fx:id="saveButton" layoutX="24.0" layoutY="480.0" mnemonicParsing="false" onAction="#save" text="Сохранить" />
+                    <Button fx:id="cancelButton" layoutX="333.0" layoutY="480.0" mnemonicParsing="false" onAction="#cancel" text="Отмена">
+                  <HBox.margin>
+                     <Insets left="280.0" />
+                  </HBox.margin></Button>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="30.0" />
+               </VBox.margin>
+                </HBox>
+            </VBox>
+    </children>
+</AnchorPane>

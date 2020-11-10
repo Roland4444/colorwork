@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="463.0" prefWidth="744.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.com.avs.controller.TareTabController">
+        <Button layoutX="14.0" layoutY="14.0" onAction="#addTare" prefHeight="32.0" prefWidth="32.0">
+            <graphic>
+                <ImageView fitHeight="24" fitWidth="24" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/icon/icon-add-64.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+
+        <Button fx:id="btnDelete" disable="true" layoutX="61.0" layoutY="14.0" onAction="#deleteTare" prefHeight="32.0" prefWidth="32.0">
+            <graphic>
+                <ImageView fitHeight="24" fitWidth="24" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/icon/icon-delete-64.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+
+        <TableView fx:id="taresTable" layoutX="14.0" layoutY="56.0" onMouseClicked="#onSelectTare" prefHeight="393.0" prefWidth="575.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="56.0">
+            <columns>
+                <TableColumn fx:id="idTareColumn" prefWidth="32.00001525878906" text="id" />
+                <TableColumn fx:id="nameTareColumn" minWidth="0.0" onEditStart="#onTareEditStart" prefWidth="299.0" text="Наименованин" />
+                <TableColumn fx:id="weightTareColumn" minWidth="0.0" onEditStart="#onTareEditStart" prefWidth="318.0" text="Вес" />
+            </columns>
+        </TableView>
+</AnchorPane>

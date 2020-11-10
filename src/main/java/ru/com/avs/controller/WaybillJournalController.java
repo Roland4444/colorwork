@@ -144,6 +144,19 @@ public class WaybillJournalController extends AbstractController {
     }
 
     @FXML
+    private void help(){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Message Here...");
+        alert.setHeaderText("Look, an Information Dialog");
+        alert.setContentText("I have a great message for you!");
+        alert.showAndWait().ifPresent(rs -> {
+            if (rs == ButtonType.OK) {
+                System.out.println("Pressed OK.");
+            }
+        });
+    };
+
+    @FXML
     private void edit() {
         if (viewModel != null) {
             WaybillEditController controller =

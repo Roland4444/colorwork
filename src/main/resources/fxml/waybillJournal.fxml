@@ -21,6 +21,8 @@
         <TextField fx:id="commentFilter" layoutX="325.0" layoutY="34.0" prefHeight="25.0" prefWidth="135.0" />
 
         <Button fx:id="buttonSearch" layoutX="477.0" layoutY="34.0" mnemonicParsing="false" onAction="#search" text="Поиск" />
+        <Button fx:id="buttonHelp" layoutX="700" layoutY="34.0" mnemonicParsing="false" onAction="#help" text="Help" />
+
         <AnchorPane layoutX="6.0" layoutY="76.0" prefHeight="388.0" prefWidth="847.0" AnchorPane.bottomAnchor="368.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="80.0">
             <children>
                 <TableView fx:id="waybillTable" layoutX="14.0" layoutY="14.0" onMouseClicked="#isSelect" prefHeight="364.0" prefWidth="819.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="10.0">

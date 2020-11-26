@@ -79,6 +79,7 @@
             <artifactId>opencv</artifactId>
             <version>4.1.2</version>
         </dependency>
+
         <!-- Logger -->
         <dependency>
             <groupId>org.slf4j</groupId>
